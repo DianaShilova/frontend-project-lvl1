@@ -13,7 +13,6 @@ export function gcd(name) {
       answerComputer = i;
     }
   }
-  console.log('Find the greatest common divisor of given numbers.');
   console.log(`Question: ${randomNumberFirst} ${randomNumberSecond}`);
   const answerUser = readlineSync.question('Your answer: ');
   if (Number(answerUser) === answerComputer) {
