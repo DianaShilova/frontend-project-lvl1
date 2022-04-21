@@ -17,7 +17,10 @@ export function isEven() {
     if (answerUser === answerComputer) {
       console.log('Correct!');
       i += 1;
-    } else console.log(`Let,s try again, ${name}`);
+    } else {
+      i = 1;
+      console.log(`Let,s try again, ${name}`);
+    }
   }
   console.log(`Congratulations, ${name}`);
 }
