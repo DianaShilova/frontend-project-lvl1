@@ -1,16 +1,16 @@
 import readlineSync from 'readline-sync';
 
 import
-{ calc } from './cli-calc.js';
+{ gcd } from './cli-gcd.js';
 
 // eslint-disable-next-line import/prefer-default-export
-export const calcGame = () => {
+export const gcdGame = () => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${name}!`);
   let i = 1;
   while (i <= 3) {
-    if (calc(name) === true) {
+    if (gcd(name) === true) {
       i += 1;
     } else { i = 1; }
   }
