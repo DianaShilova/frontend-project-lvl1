@@ -22,5 +22,5 @@ export function isEven() {
       console.log(`Let,s try again, ${name}!`);
     }
   }
-  console.log(`Congratulations, ${name}`);
+  console.log(`Congratulations, ${name}!`);
 }
