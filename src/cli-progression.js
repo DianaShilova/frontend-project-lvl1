@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 // eslint-disable-next-line import/prefer-default-export
 export function progression(name) {
-  const stringLength = Math.round(Math.floor(Math.random() * 6 + 5));
+  const stringLength = Math.round(Math.floor(Math.random() * 5 + 6));
   const passIndex = Math.round(Math.floor(Math.random() * stringLength));
   const numberProgression = Math.round(Math.floor(Math.random() * 5 + 1));
   const firstIndex = Math.round(Math.floor(Math.random() * 15 + 2));
