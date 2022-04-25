@@ -13,7 +13,7 @@ export const gcdGame = () => {
   while (i <= 3) {
     if (gcd(name) === true) {
       i += 1;
-    } else { i = 1; }
+    } else return;
   }
-  console.log(`Congratulations, ${name}`);
+  console.log(`Congratulations, ${name}!`);
 };

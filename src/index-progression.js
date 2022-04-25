@@ -13,7 +13,7 @@ export const progressionGame = () => {
   while (i <= 3) {
     if (progression(name) === true) {
       i += 1;
-    } else { i = 1; }
+    } else return;
   }
-  console.log(`Congratulations, ${name}`);
+  console.log(`Congratulations, ${name}!`);
 };

@@ -20,6 +20,6 @@ export function gcd(name) {
     return true;
   }
   console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${answerComputer}'.`);
-  console.log(`Let,s try again, ${name}`);
+  console.log(`Let's try again, ${name}`);
   return false;
 }

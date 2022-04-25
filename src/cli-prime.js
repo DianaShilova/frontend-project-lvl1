@@ -15,6 +15,6 @@ export function prime(name) {
     console.log('Correct!');
     return true;
   }
-  console.log(`Let,s try again, ${name}`);
+  console.log(`Let's try again, ${name}`);
   return false;
 }
