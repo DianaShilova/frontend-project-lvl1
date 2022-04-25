@@ -13,7 +13,8 @@ export function progression(name) {
   }
   const answerComputer = mass[passIndex];
   mass[passIndex] = ['..'];
-  console.log(`Question: ${mass}`);
+  const newMass = mass.join(' ');
+  console.log(`Question: ${newMass}`);
   const answerUser = readlineSync.question('Your answer: ');
   if (Number(answerUser) === Number(answerComputer)) {
     console.log('Correct!');
