@@ -18,7 +18,7 @@ export function isEven() {
       console.log('Correct!');
       i += 1;
     } else {
-      console.log(`Let,s try again, ${name}!`);
+      console.log(`Let's try again, ${name}!`);
       return;
     }
     console.log(`Congratulations, ${name}!`);
