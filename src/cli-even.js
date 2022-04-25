@@ -19,7 +19,7 @@ export function isEven() {
       i += 1;
     } else {
       i = 1;
-      console.log(`Let,s try again, ${name}`);
+      console.log(`Let,s try again, ${name}!`);
     }
   }
   console.log(`Congratulations, ${name}`);
