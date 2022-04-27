@@ -2,8 +2,16 @@
 [![Actions Status](https://github.com/DianaShilova/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/DianaShilova/frontend-project-lvl1/actions)
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 ![example workflow](https://github.com/DianaShilova/frontend-project-lvl1/actions/workflows/github-actions-demo.yml/badge.svg)
-https://asciinema.org/connect/2e6b2d90-7e77-4511-b40c-c2546bc8ba76
-https://asciinema.org/a/VniP0fJhhlH6O6Cc2GGmQJ2ht
-https://asciinema.org/a/aFoOWoUJGCQj4T5Yyh4ULVD3B
-https://asciinema.org/a/RO8AmvbMfQKrvqjG9oZitCzhJ
-https://asciinema.org/a/EW6VHOHZ7fbWBa6QGwLIplkih
+Brain-game включает в себя ряд игр для командной строки:
+1) brain-even - игра на четность.
+2) brain-calc - игра рандомный калькулятор.
+3) brain-progression - игра с прогрессией.
+4) brain-gcd - игра наибольший общий делитель.
+5) brain-prime - игра простое ли число.
+Для установки необходимо скачать пакет, запустив в командной строке - npm link. А далее запустить необходимую игру.
+Минимальные требования - операционная система IOS или Linux (WSL)
+https://asciinema.org/a/2ywruKzq6dVQihDVU8i1BxUZL - even
+https://asciinema.org/a/CwI2caXT19VhppyVQkgadmGBT - calc
+https://asciinema.org/a/6SMDASRhAP2TzYr6pb0RkGF67 - progression
+https://asciinema.org/a/8FrAVRKRuyJr8m4VXM1NirLlm - gcd
+https://asciinema.org/a/qv8VUTxHXWajZIEtTeq4UkQtp - prime
