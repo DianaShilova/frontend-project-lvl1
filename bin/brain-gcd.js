@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-import
-// eslint-disable-next-line import/named
-{ gcdGame } from '../src/index-gcd.js';
+import gcd from '../Games/gcd.js';
+import game from '../src/index.js';
 
-gcdGame();
+game('Find the greatest common divisor of given numbers.', gcd);

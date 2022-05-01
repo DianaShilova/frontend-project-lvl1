@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-import
-// eslint-disable-next-line import/named
-{ primeGame } from '../src/index-prime.js';
+import { prime } from '../Games/prime.js';
+import game from '../src/index.js';
 
-primeGame();
+game('Answer "yes" if given number is prime. Otherwise answer "no".', prime);

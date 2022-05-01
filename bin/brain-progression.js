@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-import
-// eslint-disable-next-line import/named
-{ progressionGame } from '../src/index-progression.js';
+import { progression } from '../Games/progression.js';
+import game from '../src/index.js';
 
-progressionGame();
+game('What number is missing in the progression?', progression);

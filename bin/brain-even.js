@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import
-{ isEven } from '../src/cli-even.js';
+import { isEven } from '../Games/even.js';
+import game from '../src/index.js';
 
-isEven();
+game('Answer "yes" if number is even, otherwise answer "no".', isEven);
