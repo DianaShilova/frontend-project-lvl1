@@ -1,11 +1,12 @@
-import { randomer } from '../src/random.js';
-// eslint-disable-next-line import/prefer-default-export
-export function calc() {
+import randomer from '../random.js';
+
+const calc = () => {
+  const task = 'What is the result of the expression?';
   const operator = [
     '-',
     '+',
     '*'];
-  const randomOperator = operator[Math.floor(Math.random() * 3)];
+  const randomOperator = operator[randomer(2)];
   const randomNumberFirst = randomer(100);
   const randomNumberSecond = randomer(100);
   const question = [`${randomNumberFirst} ${randomOperator} ${randomNumberSecond}`];
@@ -23,5 +24,7 @@ export function calc() {
     default:
       console.log('Error');
   }
-  return [question, answerComputer.toString()];
-}
+  answerComputer = String(answerComputer);
+  return [task, question, answerComputer];
+};
+export default calc;

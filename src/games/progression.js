@@ -1,6 +1,7 @@
-import { randomer } from '../src/random.js';
-// eslint-disable-next-line import/prefer-default-export
-export function progression() {
+import randomer from '../random.js';
+
+const progression = () => {
+  const task = 'What number is missing in the progression?';
   const stringLength = randomer(5, 6);
   const passIndex = randomer(stringLength);
   const numberProgression = randomer(5, 1);
@@ -14,5 +15,6 @@ export function progression() {
   const answerComputer = mass[passIndex];
   mass[passIndex] = ['..'];
   const question = mass.join(' ');
-  return [question, answerComputer.toString()];
-}
+  return [task, question, answerComputer.toString()];
+};
+export default progression;
