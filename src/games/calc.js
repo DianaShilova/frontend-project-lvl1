@@ -1,30 +1,36 @@
-import randomer from '../random.js';
+import getRandomer from '../random.js';
+import game from '../index.js';
 
-const calc = () => {
-  const task = 'What is the result of the expression?';
+const task = 'What is the result of the expression?';
+
+const getRandomCalc = (randomNumFirst, randomNumSecond, randomOperator) => {
+  switch (randomOperator) {
+    case '-':
+      return (randomNumFirst - randomNumSecond);
+    case '+':
+      return (randomNumFirst + randomNumSecond);
+    case '*':
+      return (randomNumFirst * randomNumSecond);
+    default:
+      return console.log('Error');
+  }
+};
+
+const getGamesLogic = () => {
   const operator = [
     '-',
     '+',
     '*'];
-  const randomOperator = operator[randomer(2)];
-  const randomNumberFirst = randomer(100);
-  const randomNumberSecond = randomer(100);
-  const question = [`${randomNumberFirst} ${randomOperator} ${randomNumberSecond}`];
-  let answerComputer;
-  switch (randomOperator) {
-    case '-':
-      answerComputer = randomNumberFirst - randomNumberSecond;
-      break;
-    case '+':
-      answerComputer = randomNumberFirst + randomNumberSecond;
-      break;
-    case '*':
-      answerComputer = randomNumberFirst * randomNumberSecond;
-      break;
-    default:
-      console.log('Error');
-  }
-  answerComputer = String(answerComputer);
-  return [task, question, answerComputer];
+  const randomOperator = operator[getRandomer(2)];
+  const randomNumFirst = getRandomer(100);
+  const randomNumSecond = getRandomer(100);
+  const question = [`${randomNumFirst} ${randomOperator} ${randomNumSecond}`];
+  const answerComputer = String(getRandomCalc(randomNumFirst, randomNumSecond, randomOperator));
+  return [question, answerComputer];
 };
-export default calc;
+
+const startGame = () => {
+  game(task, getGamesLogic);
+};
+
+export default startGame;

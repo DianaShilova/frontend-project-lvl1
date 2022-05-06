@@ -1,12 +1,24 @@
-import randomer from '../random.js';
+import getRandomer from '../random.js';
+import game from '../index.js';
 
-const isEven = () => {
-  const task = 'Answer "yes" if number is even, otherwise answer "no".';
-  const question = randomer(100);
-  let answerComputer;
+const task = 'Answer "yes" if number is even, otherwise answer "no".';
+
+const isEven = (question) => {
+  let answerComputer = 'no';
   if (question % 2 === 0) {
     answerComputer = 'yes';
-  } else { answerComputer = 'no'; }
-  return [task, question, answerComputer];
+  }
+  return answerComputer;
 };
-export default isEven;
+
+const getGameLogic = () => {
+  const question = getRandomer(100);
+  const answerComputer = isEven(question);
+  return [question, answerComputer];
+};
+
+const startGame = () => {
+  game(task, getGameLogic);
+};
+
+export default startGame;

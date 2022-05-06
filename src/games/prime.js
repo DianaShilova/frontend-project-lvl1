@@ -1,15 +1,26 @@
-import randomer from '../random.js';
+import getRandomer from '../random.js';
+import game from '../index.js';
 
-const prime = () => {
-  const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  const question = randomer(100, 1);
+const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+const isPrime = (question) => {
   let answerComputer = 'yes';
   for (let i = 2; i < question; i += 1) {
     if (question % i === 0) {
       answerComputer = 'no';
-      break;
+      return answerComputer;
     }
-  }
-  return [task, question, answerComputer.toString()];
+  } return answerComputer;
 };
-export default prime;
+
+const getGameLogic = () => {
+  const question = getRandomer(100, 1);
+  const answerComputer = isPrime(question);
+  return [question, answerComputer.toString()];
+};
+
+const startGame = () => {
+  game(task, getGameLogic);
+};
+
+export default startGame;

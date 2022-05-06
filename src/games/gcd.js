@@ -1,4 +1,7 @@
-import randomer from '../random.js';
+import getRandomer from '../random.js';
+import game from '../index.js';
+
+const task = 'Find the greatest common divisor of given numbers.';
 
 const calculateNumber = (randomNumberFirst, randomNumberSecond, maxNumber) => {
   let number;
@@ -26,13 +29,17 @@ const calculateAnswerComputer = (randomNumberFirst, randomNumberSecond) => {
   return calculateNumber(randomNumberFirst, randomNumberSecond, maxNumber);
 };
 
-const gcd = () => {
-  const task = 'Find the greatest common divisor of given numbers.';
-  const randomNumberFirst = randomer(100, 1);
-  const randomNumberSecond = randomer(100, 1);
+const getGameLogic = () => {
+  const randomNumberFirst = getRandomer(100, 1);
+  const randomNumberSecond = getRandomer(100, 1);
   const question = (`${randomNumberFirst} ${randomNumberSecond}`);
-  const answerComputer = calculateAnswerComputer(randomNumberFirst, randomNumberSecond);
+  const answerComputer = String(calculateAnswerComputer(randomNumberFirst, randomNumberSecond));
 
-  return [task, question, answerComputer.toString()];
+  return [question, answerComputer];
 };
-export default gcd;
+
+const startGame = () => {
+  game(task, getGameLogic);
+};
+
+export default startGame;
