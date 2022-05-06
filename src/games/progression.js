@@ -19,10 +19,10 @@ const getGameLogic = () => {
   const numberProgression = getRandomer(5, 1);
   const firstIndex = getRandomer(15, 2);
   const newProgression = getProgression(firstIndex, stringLength, numberProgression);
-  const answerComputer = newProgression[passIndex];
+  const answerComputer = String(newProgression[passIndex]);
   newProgression[passIndex] = ['..'];
   const question = newProgression.join(' ');
-  return [question, answerComputer.toString()];
+  return [question, answerComputer];
 };
 
 const startGame = () => {
